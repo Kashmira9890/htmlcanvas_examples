@@ -166,7 +166,6 @@
 					dragStart = ctx.transformedPoint(lastX,lastY);
 					dragged = false;
 				},false);
-
 				canvas.addEventListener('mousemove',function(evt){
 					lastX = evt.offsetX || (evt.pageX - canvas.offsetLeft);
 					lastY = evt.offsetY || (evt.pageY - canvas.offsetTop);
@@ -177,7 +176,6 @@
 						redraw();
 					}
 				},false);
-
 				canvas.addEventListener('mouseup',function(evt){
 					dragStart = null;
 					if (!dragged) zoom(evt.shiftKey ? -1 : 1 );
@@ -291,10 +289,8 @@
 				dx = -dx;
 			if (y1 + dy > HEIGHT || y1 + dy < 0)
 				dy = -dy;
-
 			x1 += dx;
 			y1 += dy;
-
 			ctx3.clearRect(0, 0, WIDTH, HEIGHT);
 			ctx3.fillStyle = "#444444";
 			
@@ -347,4 +343,3 @@
 		</script>
 	</section>
 </body>
-
